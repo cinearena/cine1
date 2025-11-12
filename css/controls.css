@@ -36,3 +36,14 @@
 .shaka-controls-container:hover .shaka-controls-button-panel {
   opacity: 1 !important;
 }
+/* === FIX: Hide Shaka progress bar when controls are hidden === */
+.shaka-controls-container:not(:hover) .shaka-bottom-controls {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity 0.3s ease;
+}
+
+.shaka-controls-container:hover .shaka-bottom-controls {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
